@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './Feature.css';
 
@@ -38,11 +38,7 @@ function Feature() {
         <div className="feature-list">
           {movies.map((movie, index) => (
             <div key={index} className="feature-list-item">
-              <img
-                className="feature-list-item-img"
-                src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
-                alt={movie.title}
-              />
+              <img className="feature-list-item-img" src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} alt={movie.title} />
               <span className="feature-list-item-title">{movie.title}</span>
               <p className="feature-list-item-description">{movie.overview.length > 150 ? movie.overview.substring(0, 150) + "..." : movie.overview}</p>
               <button className="feature-list-item-button">Rent</button>

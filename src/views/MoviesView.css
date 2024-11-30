@@ -1,0 +1,27 @@
+/* MoviesView.css */
+.movies-view-container {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  flex: 1;
+  padding: 10px;
+  border-right: 1px solid #ccc;
+}
+
+.main-content {
+  flex: 4;
+  padding: 10px;
+  display: flex;
+}
+
+.genre-view {
+  flex: 2;
+  margin-right: 10px;
+  border-right: 1px solid #ccc;
+}
+
+.detail-view {
+  flex: 2;
+}

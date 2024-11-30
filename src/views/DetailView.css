@@ -1,0 +1,71 @@
+/* DetailView.css */
+
+/* Container for the detail view */
+.detail-view-container {
+  padding: 60px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Title style */
+.detail-view-container h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1c1c1c;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Poster image style */
+.detail-view-poster {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* General info text styling */
+.detail-info {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+/* Genres styling */
+.detail-info span {
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Trailer section styling */
+.trailer-section {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.trailer-section iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Styling for "No movie selected" message */
+.no-movie-selected {
+  font-size: 1.2rem;
+  color: #888;
+  text-align: center;
+  font-weight: 500;
+}

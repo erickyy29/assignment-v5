@@ -1,0 +1,86 @@
+/* Container for genres */
+.genres-container {
+  padding-top: 40px;
+  width: 200px;
+  margin: 20px;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+}
+
+/* Title style */
+.genres-container h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Button container for genres */
+.genres-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  /* Space between buttons */
+}
+
+/* Style for each genre button */
+.genre-button {
+  background-color: #007bff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Hover effect for buttons */
+.genre-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Active genre button styling */
+.genre-button.active-genre {
+  background-color: #0056b3;
+  /* Change to your desired active color */
+  transform: scale(1.05);
+  /* Optional: keep the scale effect for active button */
+}
+
+/* Style for links inside buttons */
+.genre-link {
+  text-decoration: none;
+  color: white;
+  display: block;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .genres-container {
+    width: 100%;
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .genres-container h3 {
+    font-size: 1.1rem;
+  }
+
+  .genre-button {
+    width: calc(50% - 5px);
+    /* 2 buttons per row */
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .genre-button {
+    width: 100%;
+    /* 1 button per row on very small screens */
+  }
+}
