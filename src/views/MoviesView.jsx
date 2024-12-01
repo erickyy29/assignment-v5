@@ -2,7 +2,7 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Genres from "../components/Genres";
 import Header from "../components/Header.jsx";
-import styles from './MoviesView.css';
+import './MoviesView.css';
 
 function MoviesView() {
   const genres = [
@@ -19,13 +19,13 @@ function MoviesView() {
   ];
 
   return (
-    <div className={styles.container}>
+    <div className="movies-view-container">
       <Header />
-      <div className={styles.mainContent}>
-        <aside className={styles.genreView}>
+      <div className="main-content">
+        <aside className="genre-view">
           <Genres genres={genres} />
         </aside>
-        <main className={styles.detailView}>
+        <main className="detail-view">
           <Outlet />
         </main>
       </div>
