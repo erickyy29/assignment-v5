@@ -1,4 +1,3 @@
-/* Container for genre page */
 .genre-view-container {
   display: flex;
   flex-wrap: wrap;
@@ -8,7 +7,6 @@
   padding: 10px;
 }
 
-/* Individual movie item */
 .genre-view-item {
   width: 160px;
   text-align: center;
@@ -16,7 +14,6 @@
   transition: transform 0.3s ease;
 }
 
-/* Movie poster image style */
 .genre-view-image {
   width: 100%;
   height: auto;
@@ -25,7 +22,6 @@
   transition: transform 0.3s ease;
 }
 
-/* Movie title style */
 .genre-view-title {
   font-size: 1rem;
   margin-top: 10px;
@@ -33,18 +29,15 @@
   font-weight: bold;
 }
 
-/* Hover effect for movie image */
 .genre-view-item:hover .genre-view-image {
   transform: scale(1.05);
 }
 
-/* Container for pagination buttons */
 .genre-view-pagination-container {
   display: flex;
   justify-content: center;
 }
 
-/* Pagination button styles */
 .genre-view-pagination-button {
   background-color: #007bff;
   border: none;
@@ -54,23 +47,17 @@
   border-radius: 5px;
   cursor: pointer;
   margin: 0 15px;
-  /* Adds space between buttons */
   margin-bottom: 30px;
   transition: background-color 0.3s ease;
 }
 
-
-/* Hover effect for pagination button */
 .genre-view-pagination-button:hover {
   background-color: #0056b3;
 }
 
-
-/* Mobile responsive design */
 @media (max-width: 768px) {
   .genre-view-item {
     width: 140px;
-    /* Adjust width of movie items */
   }
 
   .genre-view-pagination-button {
@@ -82,7 +69,6 @@
 @media (max-width: 480px) {
   .genre-view-item {
     width: 120px;
-    /* Adjust width of movie items for very small screens */
   }
 
   .genre-view-pagination-button {

@@ -18,6 +18,7 @@
 
 .logo-container {
   flex: 1;
+  cursor: pointer;
 }
 
 .logo {
@@ -111,8 +112,9 @@
 }
 
 .signin-btn {
-  display: inline-block;
-  padding: 5px 16px;
+  display: flex;
+  padding: 5px 15px;
+  margin: 5px;
   font-size: 14px;
   font-weight: bold;
   background-color: rgb(0, 25, 181);

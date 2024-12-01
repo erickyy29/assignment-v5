@@ -1,14 +1,13 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import "./DetailView.css";
 
 function DetailView() {
   const { id } = useParams();
-  const [movie, setMovie] = useState(null);
+  const [movie, setMovie] = useState();
   const [trailers, setTrailers] = useState([]);
 
-  // Fetch the movie details and trailers when the component mounts
   useEffect(() => {
     async function fetchMovieDetails() {
       const movieResponse = await axios.get(
@@ -16,7 +15,6 @@ function DetailView() {
       );
       setMovie(movieResponse.data);
 
-      // Fetch movie videos (trailers)
       const videosResponse = await axios.get(
         `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${import.meta.env.VITE_TMDB_KEY}`
       );
@@ -50,7 +48,6 @@ function DetailView() {
                 <iframe
                   src={`https://www.youtube.com/embed/${trailers[0].key}`}
                   title={trailers[0].name}
-                  frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import axios from "axios";
 import "./GenreView.css";
@@ -20,7 +20,7 @@ function GenreView() {
 
   return (
     <div>
-      <h2>Movies in Genre {genre_id}</h2>
+      <h2>Movies in Genre</h2>
       <div className="genre-view-container">
         {movies.map((movie) => (
           <div key={movie.id} className="genre-view-item">

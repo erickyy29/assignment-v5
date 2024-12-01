@@ -5,7 +5,6 @@ import { useNavigate, useLocation } from 'react-router-dom';
 function Header() {
   const navigate = useNavigate();
   const location = useLocation();
-
   const isActive = (path) => location.pathname === path;
 
   return (
@@ -28,12 +27,6 @@ function Header() {
             >
               Movies
             </li>
-            <li
-              className={`menu-list-item ${isActive("/shows") ? "active" : ""}`}
-              onClick={() => navigate("/shows")}
-            >
-              Shows
-            </li>
           </ul>
         </div>
 
@@ -51,9 +44,20 @@ function Header() {
             <a
               href="/signIn"
               className="signin-btn"
-              onClick={() => navigate("/signIn")}
+              onClick={() => navigate("/signin")}
             >
               Sign In
+            </a>
+          </div>
+        </div>
+        <div className="sign-in-container">
+          <div className="sign-in-button-container">
+            <a
+              href="/signup"
+              className="signin-btn"
+              onClick={() => navigate("/signup")}
+            >
+              Sign Up
             </a>
           </div>
         </div>

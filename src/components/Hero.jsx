@@ -3,7 +3,7 @@ import axios from 'axios';
 import './Hero.css';
 
 function Hero() {
-  const [movie, setMovie] = useState(null);
+  const [movie, setMovie] = useState();
 
   useEffect(() => {
     (async function getRandomMovie() {
@@ -21,8 +21,7 @@ function Hero() {
   return (
     <div className="featured-content-container">
       {movie && (
-        <div
-          className="featured-content"
+        <div className="featured-content"
           style={{
             background: `linear-gradient(to bottom, rgba(0, 0, 0, 0), #151515), url('https://image.tmdb.org/t/p/w500${movie.backdrop_path}')`,
           }}
