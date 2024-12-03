@@ -34,6 +34,9 @@ function DetailView() {
             alt={movie.title}
             className="detail-view-poster"
           />
+          <button className="add-to-cart-button">
+            Add to Cart
+          </button>
           <p className="detail-info"><span>Overview:</span> {movie.overview}</p>
           <p className="detail-info"><span>Release Date:</span> {movie.release_date}</p>
           <p className="detail-info"><span>Rating:</span> {movie.vote_average}</p>

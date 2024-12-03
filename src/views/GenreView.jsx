@@ -24,7 +24,7 @@ function GenreView() {
       <div className="genre-view-container">
         {movies.map((movie) => (
           <div key={movie.id} className="genre-view-item">
-            <Link to={`/movies/details/${movie.id}`} style={{ textDecoration: "none", color: "inherit" }}>
+            <Link to={`/movies/details/${movie.id}`}>
               <img
                 src={`https://image.tmdb.org/t/p/w200/${movie.poster_path}`}
                 alt={movie.title}

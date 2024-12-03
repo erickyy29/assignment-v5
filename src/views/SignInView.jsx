@@ -1,13 +1,21 @@
-import { useNavigate } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
+import { useState } from 'react';
 import './SignInView.css';
 
 function SignInView() {
   const navigate = useNavigate();
+  const [pass, setPass] = useState('');
+  const password = "iloveyou";
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    navigate('/');
+
+    if (pass === password) {
+      navigate('/');
+    } else {
+      alert('Wrong Password');
+      console.log(pass);
+    }
   };
 
   return (
@@ -20,7 +28,7 @@ function SignInView() {
             <label>Email</label>
           </div>
           <div className="info">
-            <input type="password" name="password" required />
+            <input type="password" name="password" onChange={(event) => { setPass(event.target.value) }} required />
             <label>Password</label>
           </div>
           <button className="sign-in-btn" type="submit">Sign In</button>

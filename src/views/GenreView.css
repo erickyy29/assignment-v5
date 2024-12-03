@@ -14,6 +14,11 @@
   transition: transform 0.3s ease;
 }
 
+.genre-view-item a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .genre-view-image {
   width: 100%;
   height: auto;

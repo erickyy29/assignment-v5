@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { Link } from "react-router-dom";
+
 import axios from 'axios';
 import './Hero.css';
 
@@ -28,7 +30,11 @@ function Hero() {
         >
           <h1 className="featured-title">{movie.original_title}</h1>
           <p className="featured-text">{movie.overview.length > 200 ? movie.overview.substring(0, 200) + "..." : movie.overview}</p>
-          <button className="featured-button">RENT NOW</button>
+
+          <div className="featured-button-container">
+            <button className="featured-button">Add To Cart</button>
+            <button className="featured-button"><Link to={`/movies/details/${movie.id}`}>More Info</Link></button>
+          </div>
         </div>
       )}
     </div>

@@ -56,7 +56,7 @@ function Feature() {
                   ? movie.overview.substring(0, 150) + "..."
                   : movie.overview}
               </p>
-              <button className="feature-list-item-button">Rent</button>
+              <button className="feature-list-item-button">Add To Cart</button>
             </div>
           ))}
         </div>
