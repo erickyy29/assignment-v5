@@ -18,7 +18,7 @@ function DetailView() {
       const videosResponse = await axios.get(
         `https://api.themoviedb.org/3/movie/${id}/videos?api_key=${import.meta.env.VITE_TMDB_KEY}`
       );
-      setTrailers(videosResponse.data.results);
+      setTrailers(videosResponse.data.results.filter((video) => video.type === "Trailer"));
     }
 
     fetchMovieDetails();
@@ -37,12 +37,13 @@ function DetailView() {
           <button className="add-to-cart-button">
             Add to Cart
           </button>
-          <p className="detail-info"><span>Overview:</span> {movie.overview}</p>
+          <p className="detail-info"><span>Overview:</span>{movie.overview}</p>
           <p className="detail-info"><span>Release Date:</span> {movie.release_date}</p>
           <p className="detail-info"><span>Rating:</span> {movie.vote_average}</p>
           <p className="detail-info"><span>Genres:</span> {movie.genres.map((g) => g.name).join(", ")}</p>
           <p className="detail-info"><span>Runtime:</span> {movie.runtime} minutes</p>
           <p className="detail-info"><span>Language:</span> {movie.original_language}</p>
+          <p className="detail-info"><span>Revenue:</span> {movie.revenue}$</p>
 
           {trailers.length > 0 && (
             <div className="trailer-section">
