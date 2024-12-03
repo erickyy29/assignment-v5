@@ -7,6 +7,7 @@ import MoviesView from "./views/MoviesView.jsx";
 import GenreView from "./views/GenreView.jsx";
 import DetailView from "./views/DetailView.jsx";
 
+
 function App() {
   return (
     <Router>

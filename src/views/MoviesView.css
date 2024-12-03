@@ -1,6 +1,7 @@
 .movies-view-container {
   display: flex;
-  height: 100vh;
+  height: 100%;
+  background: #151515;
 }
 
 .sidebar {

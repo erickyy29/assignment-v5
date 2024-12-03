@@ -33,6 +33,7 @@ function GenreView() {
             </Link>
           </div>
         ))}
+
       </div>
       <div className="genre-view-pagination-container">
         <button

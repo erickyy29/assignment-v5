@@ -25,7 +25,7 @@ function Hero() {
       {movie && (
         <div className="featured-content"
           style={{
-            background: `linear-gradient(to bottom, rgba(0, 0, 0, 0), #151515), url('https://image.tmdb.org/t/p/w500${movie.backdrop_path}')`,
+            background: `linear-gradient(to bottom, rgba(0, 0, 0, 0), #151515), url('https://image.tmdb.org/t/p/w1280${movie.backdrop_path}')`,
           }}
         >
           <h1 className="featured-title">{movie.original_title}</h1>

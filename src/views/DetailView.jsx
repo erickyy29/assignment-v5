@@ -46,7 +46,7 @@ function DetailView() {
 
           {trailers.length > 0 && (
             <div className="trailer-section">
-              <h3>Trailer:</h3>
+              <h3 className="trailer-text">Trailer:</h3>
               <div>
                 <iframe
                   src={`https://www.youtube.com/embed/${trailers[0].key}`}

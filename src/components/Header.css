@@ -25,6 +25,7 @@
   font-family: 'sen', sans-serif;
   font-size: 30px;
   color: rgb(0, 25, 181);
+  cursor: pointer;
 }
 
 .menu-container {
