@@ -12,8 +12,9 @@ function ScrollFeature() {
   useEffect(() => {
     (async function fetchMovies() {
       const response = await axios.get(
-        `https://api.themoviedb.org/3/movie/top_rated?api_key=${import.meta.env.VITE_TMDB_KEY}`
+        `https://api.themoviedb.org/3/movie/top_rated?api_key=${import.meta.env.VITE_TMDB_KEY}&include_adult=false`
       );
+      
 
       const moviesData = response.data.results;
       const randomMovies = [];
@@ -58,7 +59,7 @@ function ScrollFeature() {
 
   return (
     <div className="movie-list-container">
-      <h1 className="movie-list-title">Top Rated</h1>
+      <h1 className="movie-list-title">Top Rated Movies</h1>
       <div className="movie-list-wrapper">
         <div
           className="movie-list"

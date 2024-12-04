@@ -5,7 +5,7 @@ import './SignInView.css';
 function SignInView() {
   const navigate = useNavigate();
   const [pass, setPass] = useState('');
-  const password = "iloveyoumrqayum";
+  const password = "mrqayum";
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -40,7 +40,7 @@ function SignInView() {
             <Link to="#">Need help?</Link>
           </div>
         </form>
-        <p>New to Flixit? <Link to="/signup">Sign up now</Link></p>
+        <p>New to Aginflix? <Link to="/signup">Sign up now!</Link></p>
       </div>
     </div>
   );

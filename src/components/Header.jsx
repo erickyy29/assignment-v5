@@ -1,6 +1,7 @@
 import "./Header.css";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { useNavigate, useLocation } from 'react-router-dom';
+import logo from "../imgs/logo.png"; // Adjust the path if necessary
 
 function Header() {
   const navigate = useNavigate();
@@ -10,8 +11,8 @@ function Header() {
   return (
     <div className="navbar">
       <div className="navbar-container">
-        <div className="logo-container">
-          <h1 className="logo" onClick={() => navigate("/")}>Flixit</h1>
+        <div className="logo-container" onClick={() => navigate("/")}>
+          <img src={logo} alt="Aginflix Logo" className="logo-image" />
         </div>
         <div className="menu-container">
           <ul className="menu-list">
@@ -39,27 +40,21 @@ function Header() {
           </form>
         </div>
 
-        <div className="sign-in-container">
-          <div className="sign-in-button-container">
-            <a
-              href="/signIn"
-              className="signin-btn"
-              onClick={() => navigate("/signin")}
-            >
-              Sign In
-            </a>
-          </div>
-        </div>
-        <div className="sign-in-container">
-          <div className="sign-in-button-container">
-            <a
-              href="/signup"
-              className="signin-btn"
-              onClick={() => navigate("/signup")}
-            >
-              Sign Up
-            </a>
-          </div>
+        <div className="auth-buttons"> {/* Unified container for buttons */}
+          <a
+            href="/signin"
+            className="signin-btn"
+            onClick={() => navigate("/signin")}
+          >
+            Sign In
+          </a>
+          <a
+            href="/signup"
+            className="signup-btn"
+            onClick={() => navigate("/signup")}
+          >
+            Sign Up
+          </a>
         </div>
       </div>
     </div>

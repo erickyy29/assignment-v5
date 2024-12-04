@@ -1,18 +1,21 @@
 .feature-list-container {
   padding: 20px 20px;
-  height: 300px;
+  height: auto; 
+  margin-bottom: 40px; 
 }
 
 .titles-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 20px; 
 }
 
 .feature-list-title {
   font-size: 34px;
   font-weight: bold;
   color: white;
+  margin-bottom: 10px; 
 }
 
 .feature-list-more {
@@ -32,19 +35,21 @@
 
 .feature-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   gap: 20px;
   justify-content: space-between;
   margin-top: 20px;
+  margin-bottom: 20px; 
   transition: all 0.3s ease-in-out;
 }
 
 .feature-list-item {
   position: relative;
-  width: calc(25% - 20px);
+  width: calc(25% - 20px); 
   height: 220px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
+  margin-bottom: 20px; 
 }
 
 .feature-list-item:hover .feature-list-item-img {
@@ -110,12 +115,21 @@
 
 @media only screen and (max-width: 800px) {
   .feature-list-item {
-    width: 48%;
+    width: 48%; 
+  }
+
+  .titles-container {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 
 @media only screen and (max-width: 500px) {
   .feature-list-item {
-    width: 100%;
+    width: 100%; 
+  }
+
+  .titles-container {
+    margin-bottom: 15px;
   }
 }

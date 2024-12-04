@@ -7,27 +7,27 @@ function Feature() {
   const [movies, setMovies] = useState([]);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    (async function getRandomMovies() {
-      const response = await axios.get(
-        `https://api.themoviedb.org/3/movie/now_playing?api_key=${import.meta.env.VITE_TMDB_KEY}`
-      );
+useEffect(() => {
+  (async function getRandomMovies() {
+    const response = await axios.get(
+      `https://api.themoviedb.org/3/movie/now_playing?api_key=${import.meta.env.VITE_TMDB_KEY}&include_adult=false`
+    );
 
-      const moviesData = response.data.results;
-      const randomMovies = [];
-      let availableMovies = [...moviesData];
+    const moviesData = response.data.results;
+    const randomMovies = [];
+    let availableMovies = [...moviesData];
 
-      for (let i = 0; i < 4; i++) {
-        const randomIndex = Math.floor(Math.random() * availableMovies.length);
-        const randomMovie = availableMovies[randomIndex];
+    for (let i = 0; i < 4; i++) {
+      const randomIndex = Math.floor(Math.random() * availableMovies.length);
+      const randomMovie = availableMovies[randomIndex];
 
-        randomMovies.push(randomMovie);
-        availableMovies.splice(randomIndex, 1);
-      }
+      randomMovies.push(randomMovie);
+      availableMovies.splice(randomIndex, 1);
+    }
 
-      setMovies(randomMovies);
-    })();
-  }, []);
+    setMovies(randomMovies);
+  })();
+}, []);
 
   return (
     <div className="feature-list-container">

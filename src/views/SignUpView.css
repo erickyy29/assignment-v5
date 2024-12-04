@@ -12,12 +12,12 @@
 
 .sign-up {
   width: 90%;
-  margin-top: 10px;
   max-width: 430px;
   padding: 30px;
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.85);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center; /* Ensures content inside is centered */
 }
 
 .sign-up h2 {
@@ -28,25 +28,33 @@
 }
 
 .sign-up form {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the input fields horizontally */
   margin: 25px 0 40px;
 }
 
 form .info {
+  width: 100%; /* Ensures input containers span full width */
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .info input {
-  width: 100%;
-  max-width: 390px;
-  height: 50px;
+  width: 100%; /* Ensures input fields are not oversized */
+  max-width: 350px; /* Limits input width */
+  height: 45px;
   background: #333;
   border: none;
   border-radius: 4px;
   color: #fff;
   font-size: 1rem;
-  padding: 0px 20px;
+  padding: 0 15px;
   transition: all 0.2s ease, transform 0.2s ease;
+  text-align: left;
 }
 
 .info input:focus {
@@ -55,42 +63,38 @@ form .info {
   transform: scale(1.02);
 }
 
-.info input:is(:focus, :valid) {
-  padding: 16px 20px 0;
-}
-
 .info label {
   position: absolute;
   left: 20px;
   top: 50%;
-  color: #8c8c8c;
-  pointer-events: none;
   transform: translateY(-50%);
+  color: #8c8c8c;
   font-size: 1rem;
   transition: transform 0.2s ease, font-size 0.2s ease;
+  pointer-events: none;
 }
 
-.info input:is(:focus, :valid)~label {
+.info input:is(:focus, :valid) ~ label {
   transform: translateY(-130%);
   font-size: 0.75rem;
 }
 
 form .sign-up-btn {
   width: 100%;
-  padding: 16px 0;
+  max-width: 350px;
+  padding: 15px 0;
   font-size: 1rem;
   border: none;
   color: #fff;
   font-weight: 500;
   border-radius: 4px;
-  margin: 20px 0 10px;
-  background: rgb(0, 25, 181);
+  background: #00a800;
   cursor: pointer;
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 
 form .sign-up-btn:hover {
-  background: rgb(0, 16, 122);
+  background: #007d00;
   transform: scale(1.05);
 }
 
@@ -98,6 +102,9 @@ form .help {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 350px;
+  margin-top: 10px;
 }
 
 form .remember {
@@ -130,13 +137,12 @@ form .help :where(label, a) {
 
 @media (max-width: 740px) {
   .sign-up {
-    top: 45%;
     width: 100%;
     padding: 20px;
   }
 
   .info input {
-    width: 100%;
+    max-width: 100%; /* Adjust input width for smaller screens */
   }
 
   .sign-up h2 {
@@ -149,6 +155,6 @@ form .help :where(label, a) {
   }
 
   .info {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 }
