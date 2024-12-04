@@ -17,25 +17,24 @@
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.85);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-  text-align: center; /* Ensures content inside is centered */
+  text-align: center;
 }
 
 .sign-up h2 {
   color: #fff;
   font-size: 2rem;
   margin-bottom: 20px;
-  text-align: center;
 }
 
 .sign-up form {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers the input fields horizontally */
+  align-items: center;
   margin: 25px 0 40px;
 }
 
 form .info {
-  width: 100%; /* Ensures input containers span full width */
+  width: 100%;
   position: relative;
   margin-bottom: 20px;
   display: flex;
@@ -44,38 +43,32 @@ form .info {
 }
 
 .info input {
-  width: 100%; /* Ensures input fields are not oversized */
-  max-width: 350px; /* Limits input width */
+  width: 100%;
+  max-width: 350px;
   height: 45px;
   background: #333;
   border: none;
   border-radius: 4px;
   color: #fff;
   font-size: 1rem;
-  padding: 0 15px;
+  padding: 12px 20px;  /* Add padding to create space between the text and the edges of the input */
   transition: all 0.2s ease, transform 0.2s ease;
   text-align: left;
-}
-
-.info input:focus {
-  background: #444;
-  outline: none;
-  transform: scale(1.02);
+  margin-top: 15px;
 }
 
 .info label {
   position: absolute;
-  left: 20px;
-  top: 50%;
-  transform: translateY(-50%);
+  left: 20px;  /* Position the label at the top-left */
+  top: 5px;    /* Adjust the label position higher */
   color: #8c8c8c;
   font-size: 1rem;
-  transition: transform 0.2s ease, font-size 0.2s ease;
-  pointer-events: none;
+  pointer-events: none;  /* Ensure the label doesn't interfere with typing */
 }
 
-.info input:is(:focus, :valid) ~ label {
-  transform: translateY(-130%);
+.info input:focus ~ label,  /* Move the label up when the input is focused */
+.info input:is(:focus, :valid) ~ label {  /* Move the label up when the input is valid (non-empty) */
+  transform: translateY(-30%);  /* Adjust the label movement to a smaller value */
   font-size: 0.75rem;
 }
 
@@ -142,7 +135,8 @@ form .help :where(label, a) {
   }
 
   .info input {
-    max-width: 100%; /* Adjust input width for smaller screens */
+    max-width: 100%;
+    padding: 10px 15px;
   }
 
   .sign-up h2 {

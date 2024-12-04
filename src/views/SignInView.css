@@ -10,47 +10,51 @@
 }
 
 .sign-in {
-  position: absolute;
-  left: 50%;
-  top: 50%;
   width: 90%;
   max-width: 450px;
-  padding: 50px;
-  border-radius: 15px;
-  background: linear-gradient(to bottom right, rgba(0, 100, 0, 0.85), rgba(0, 150, 0, 0.9));
-  transform: translate(-50%, -50%);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+  padding: 30px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.85);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  position: relative;
+  color: #fff;
 }
 
 .sign-in h2 {
   color: #d4f8d4;
   font-size: 2.5rem;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .sign-in form {
-  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25px 0;
 }
 
 form .info {
   position: relative;
-  height: 50px;
-  margin-bottom: 30px;
+  width: 100%;
+  margin-bottom: 25px;
 }
 
 .info input {
   width: 100%;
-  height: 100%;
+  height: 35px; /* Smaller height */
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid #00b300;
-  border-radius: 8px;
+  border-radius: 4px;
   color: #e5ffe5;
   font-size: 1rem;
-  padding: 0 15px;
+  padding: 8px 12px; /* Slightly smaller padding */
   transition: all 0.3s ease;
   outline: none;
+  text-align: left;
+  box-sizing: border-box; /* Ensures padding does not affect total width */
 }
 
 .info input:focus {
@@ -61,36 +65,37 @@ form .info {
 
 .info label {
   position: absolute;
-  left: 15px;
-  top: 50%;
+  left: 12px;  /* Align horizontally with input padding */
+  top: 50%;    /* Center vertically */
+  transform: translateY(-50%); /* Center vertically */
   color: #99ff99;
-  pointer-events: none;
-  transform: translateY(-50%);
   font-size: 1rem;
+  pointer-events: none;
   transition: transform 0.3s ease, font-size 0.3s ease;
 }
 
 .info input:focus + label,
-.info input:valid + label {
-  transform: translateY(-150%);
-  font-size: 0.8rem;
+.info input:is(:focus, :valid) + label {
+  transform: translateY(-150%); /* Move label above input */
+  font-size: 0.8rem; /* Shrink font */
+  color: #00ff00; /* Change label color to green when focused */
 }
 
 form .sign-in-btn {
   width: 100%;
-  padding: 15px 0;
+  padding: 12px 0;
   font-size: 1.2rem;
   font-weight: bold;
   color: #fff;
   border: none;
-  border-radius: 8px;
-  background: linear-gradient(to right, #00b300, #009900);
+  border-radius: 4px;
+  background: #00a800;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 form .sign-in-btn:hover {
-  background: linear-gradient(to right, #00ff00, #00b300);
+  background: #007d00;
   box-shadow: 0 5px 15px rgba(0, 255, 0, 0.5);
   transform: scale(1.05);
 }
@@ -99,6 +104,7 @@ form .help {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
   margin-top: 10px;
 }
 
@@ -141,6 +147,24 @@ form .help a:hover {
 
 @media (max-width: 740px) {
   .sign-in {
-    padding: 30px;
+    padding: 20px;
+  }
+
+  .info input {
+    max-width: 100%;
+    padding: 8px 15px;
+  }
+
+  .sign-in h2 {
+    font-size: 1.75rem;
+  }
+
+  .sign-in-btn {
+    font-size: 1.1rem;
+    padding: 14px 0;
+  }
+
+  .info {
+    margin-bottom: 15px;
   }
 }
