@@ -40,7 +40,7 @@ function Header() {
           </form>
         </div>
 
-        <div className="auth-buttons"> {/* Unified container for buttons */}
+        <div className="auth-buttons">
           <a
             href="/signin"
             className="signin-btn"

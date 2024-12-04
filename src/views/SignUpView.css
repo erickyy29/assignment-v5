@@ -51,7 +51,7 @@ form .info {
   border-radius: 4px;
   color: #fff;
   font-size: 1rem;
-  padding: 12px 20px;  /* Add padding to create space between the text and the edges of the input */
+  padding: 12px 20px;  
   transition: all 0.2s ease, transform 0.2s ease;
   text-align: left;
   margin-top: 15px;
@@ -59,17 +59,12 @@ form .info {
 
 .info label {
   position: absolute;
-  left: 20px;  /* Position the label at the top-left */
-  top: 5px;    /* Adjust the label position higher */
+  left: 130px;  
+  top: 40px;  
   color: #8c8c8c;
   font-size: 1rem;
-  pointer-events: none;  /* Ensure the label doesn't interfere with typing */
-}
-
-.info input:focus ~ label,  /* Move the label up when the input is focused */
-.info input:is(:focus, :valid) ~ label {  /* Move the label up when the input is valid (non-empty) */
-  transform: translateY(-30%);  /* Adjust the label movement to a smaller value */
-  font-size: 0.75rem;
+  pointer-events: none; 
+  transition: all 0.2s ease; 
 }
 
 form .sign-up-btn {

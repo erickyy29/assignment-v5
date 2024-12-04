@@ -18,6 +18,8 @@ function MoviesView() {
     { genre: "Fantasy", id: 14 },
     { genre: "Animation", id: 16 },
     { genre: "Western", id: 37 },
+    { genre: "TV", id: 10770 },
+    { genre: "Family", id: 10751 },
   ];
 
   return (

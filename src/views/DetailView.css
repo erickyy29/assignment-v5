@@ -1,8 +1,8 @@
 .detail-view-container {
   padding: 60px;
   font-family: 'Roboto', sans-serif;
-  background-color: #0b3d0b; /* Dark green background */
-  color: #e0f7e0; /* Light green text */
+  background-color: #0b3d0b; 
+  color: #e0f7e0; 
   max-width: 1200px;
   margin: 0 auto;
   border-radius: 15px;
@@ -12,7 +12,7 @@
 .detail-view-container h1 {
   font-size: 2.8rem;
   font-weight: bold;
-  color: #a3ffab; /* Bright green for the title */
+  color: #a3ffab; 
   margin-bottom: 20px;
   text-align: center;
   text-transform: uppercase;
@@ -34,18 +34,18 @@
   font-size: 1.2rem;
   line-height: 1.8;
   margin-bottom: 15px;
-  color: #e6ffe6; /* Softer green for text */
+  color: #e6ffe6; 
 }
 
 .detail-info span {
   font-weight: bold;
-  color: #63ff63; /* Bright green for emphasis */
+  color: #63ff63; 
 }
 
 .trailer-section {
   margin-top: 50px;
   text-align: center;
-  color: #a3ffab; /* Bright green for trailer text */
+  color: #a3ffab; 
 }
 
 .trailer-text {
@@ -65,7 +65,7 @@
 }
 
 .add-to-cart-button {
-  background-color: #2db92d; /* Bright green button */
+  background-color: #2db92d;
   border: none;
   margin-bottom: 20px;
   padding: 12px 25px;
@@ -81,7 +81,7 @@
 }
 
 .add-to-cart-button:hover {
-  background-color: #249624; /* Darker green on hover */
-  transform: scale(1.05); /* Slight zoom effect */
+  background-color: #249624; 
+  transform: scale(1.05); 
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }

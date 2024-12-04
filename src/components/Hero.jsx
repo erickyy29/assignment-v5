@@ -15,7 +15,6 @@ function Hero() {
 
         const movies = response.data.results;
 
-        // Ensure movies array is valid and contains unique images
         if (movies && movies.length > 0) {
           const randomMovie = movies[Math.floor(Math.random() * movies.length)];
           setMovie(randomMovie);
